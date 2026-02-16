@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+
+  gateway:
+    build: ./api-gateway
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./api-gateway/.env
+
+  auth-service:
+    build: ./auth-service
+    ports:
+      - "3000:3000"
+
+  usuario-service:
+    build: ./usuario-service
+    ports:
+      - "3002:3002"
+
+  agendamento-service:
+    build: ./agendamento-service
+    ports:
+      - "3001:3001"
+
+  notification-service:
+    build: ./notification-service
+    ports:
+      - "3003:3003"
