@@ -14,7 +14,4 @@ app.use(authMiddleware);
 
 proxyRoutes(app);
 
-app.listen(8080, () => {
-    console.log("API Gateway rodando na porta 8080");
-});
-
+module.exports = app;
