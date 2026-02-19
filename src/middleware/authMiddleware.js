@@ -2,6 +2,7 @@ const jwt = require("jsonwebtoken");
 
 module.exports = (req, res, next) => {
     if (req.path.startsWith("/auth")) return next();
+    if (req.path.startsWith("/usuarios") && req.method === "POST") return next();
 
     const auth = req.headers.authorization;
 
