@@ -7,6 +7,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE ${PORT}
+EXPOSE 8080
 
-CMD ["node", "src/app.js"]
+CMD ["node", "index.js"]
